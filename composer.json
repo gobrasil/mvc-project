@@ -1,0 +1,22 @@
+{
+    "name": "gabrielmelo/mvc-project",
+    "description": "Is a Model View Controller basic struture",
+    "license": "APACHE LICENSE",
+    "authors": [
+        {
+            "name": "Gabriel Melo",
+            "email": "dev.gabrielomelo@gmail.com"
+        },
+		{ 
+	   		"name": "Sabrina Ribeiro",
+	    	"email": "ssabrinaribeiro@outlook.com" 
+		}
+    ],
+    "autoload" : {
+	    	"psr-4": {
+				"App" : "src/App"
+	    	}
+    },
+    "minimum-stability": "alpha",
+    "require": {}
+}
