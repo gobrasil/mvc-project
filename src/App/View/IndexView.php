@@ -2,12 +2,17 @@
 
 namespace App\View;
 
+
+/**
+ * View from index
+ * @link https://github.com/gabrielomelo
+ * @author Gabriel Melo <dev.gabrielomelo@gmail.com>
+ */
+
 class IndexView 
 {
-	
-	public function __construct()
+	public function showTheResult(int $c)
 	{
-		echo "hello World";
+		echo $c;		
 	}
-	
 }
