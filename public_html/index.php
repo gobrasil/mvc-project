@@ -2,7 +2,6 @@
 
 include_once 'bootstrap.php';
 
-use App\Controller\MainController;
 
-$controller = new MainController();
-$controller->index();
+$controller = new App\Controllers\IndexController($_REQUEST);
+$controller->loadView();

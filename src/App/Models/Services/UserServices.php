@@ -1,18 +1,18 @@
 <?php
 
-namespace App\View;
-
+namespace App\Model\Services;
 
 /**
- * View from index
  * @link https://github.com/gabrielomelo
  * @author Gabriel Melo <dev.gabrielomelo@gmail.com>
  */
 
-class IndexView 
+class UserServices
 {
-	public function showTheResult(int $c)
+	
+	public function login(Array $info)
 	{
-		echo $c;		
+		print_r($info);
 	}
+	
 }
