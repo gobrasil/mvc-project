@@ -12,8 +12,7 @@ trait Validation
 	
 	public function email(string $email)
 	{
-		$pattern = "/@/";
-		if (strlen($email) < 5 || !preg_match($pattern, $email)) {
+		if (strlen($email) < 5 || !preg_match('/@/', $email)) {
 			return false;
 		}
 		return $email;

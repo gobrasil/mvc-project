@@ -2,6 +2,7 @@
 
 include_once 'bootstrap.php';
 
+use App\Controllers\IndexController;
 
-$controller = new App\Controllers\IndexController($_REQUEST);
+$controller = new IndexController($_REQUEST);
 $controller->loadView();

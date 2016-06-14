@@ -19,7 +19,7 @@ class IndexController extends Controller
 	
 	public function loadView()
 	{
-		return new View(new \Smarty(), $this);
+		return new View($this);
 	}
 	
 	public function login()

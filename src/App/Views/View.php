@@ -16,9 +16,9 @@ class View
 	protected $smarty;
 	protected $controller;
 	
-	public function __construct(Smarty $smarty_class, Controller $controller)
+	public function __construct(Controller $controller)
 	{
-		$this->smarty = $smarty_class;
+		$this->smarty = new Smarty();
 		$this->smarty->template_dir = '../src/App/Views/templates/';
 		$this->smarty->compile_dir = '../src/App/Views/templates_c/';
 		$this->smarty->config_dir = '../src/App/Views/configs/';

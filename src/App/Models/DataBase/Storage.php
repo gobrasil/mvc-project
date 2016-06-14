@@ -12,6 +12,8 @@ require_once 'config/db.php';
 class Storage
 {
 	
+	public $PDO;
+	
 	public function __construct()
 	{
 		$this->connect();
@@ -19,7 +21,7 @@ class Storage
 	
 	public function connect()
 	{
-		$this->PDO = new \PDO();
+		$this->PDO = new \PDO(DSN, USER, PASSWD);
 	}
 	
 }

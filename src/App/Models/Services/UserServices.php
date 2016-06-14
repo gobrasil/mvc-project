@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model\Services;
+namespace App\Models\Services;
 
 /**
  * @link https://github.com/gabrielomelo
