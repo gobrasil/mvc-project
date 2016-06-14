@@ -1,6 +1,6 @@
 <?php
 
-include_once 'bootstrap.php';
+include_once '../bootstrap.php';
 
 use App\Controllers\IndexController;
 
