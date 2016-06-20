@@ -4,8 +4,8 @@ namespace App\Controllers;
 
 use App\Models\Services\UserServices;
 use App\Controllers\Controller;
-use App\Models\Security\Traits\Validation;
 use App\Views\IndexView as View;
+use Respect\Validation\Validator as v;
 
 /**
  * @link https://github.com/gabrielomelo
@@ -13,22 +13,19 @@ use App\Views\IndexView as View;
  */
 
 class IndexController extends Controller
-{
+{	
 	
-	use Validation;
-	
-	public function loadView()
+	public function loadView($smarty_class)
 	{
-		return new View($this);
+		return new View($smarty_class, $this);
 	}
 	
 	public function login()
 	{
-		$info['name'] = $this->name($this->request['nick_name']);
-		$info['email'] = $this->email($this->request['email']);
+		$info['name'] = $this->request['nick_name'];
+		$info['email'] = $this->request['email'];
 		$info['password'] = sha1($this->request['password']);
 		$service = new UserServices();
-		$service->login($info);
+		$service->login($info);		
 	}
-	
 }
