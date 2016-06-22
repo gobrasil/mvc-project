@@ -6,7 +6,7 @@
         {
             "name": "Gabriel Melo",
             "email": "dev.gabrielomelo@gmail.com"
-        },
+        }
     ],
     "autoload" : {
 	    	"psr-4": {
@@ -19,6 +19,7 @@
     },
     "require": {
     	"twig/twig": "1.24.1",
-    	"respect/validation": "1.1.2"
+    	"respect/validation": "1.1.2",
+    	"doctrine/orm": "2.5.4"
     }
 }

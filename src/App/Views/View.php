@@ -2,7 +2,6 @@
 
 namespace App\Views;
 
-use Smarty;
 use App\Controllers\Controller;
 
 /**
@@ -12,7 +11,7 @@ use App\Controllers\Controller;
 
 class View 
 {
-	protected $smarty;
+	protected $twig;
 	protected $controller;
 	
 	public function __construct(Smarty $smarty_class, Controller $controller)
