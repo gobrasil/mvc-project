@@ -7,10 +7,6 @@
             "name": "Gabriel Melo",
             "email": "dev.gabrielomelo@gmail.com"
         },
-		{ 
-	   		"name": "Sabrina Ribeiro",
-	    	"email": "ssabrinaribeiro@outlook.com" 
-		}
     ],
     "autoload" : {
 	    	"psr-4": {
