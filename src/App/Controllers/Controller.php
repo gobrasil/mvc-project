@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Views\View;
+
 /**
  * @link https://github.com/gabrielomelo
  * @author Gabriel Melo <dev.gabrielomelo@gmail.com>
@@ -10,11 +12,12 @@ namespace App\Controllers;
 class Controller
 {
 	protected $request;
+	protected $model;
+	protected $view;
 	
 	public function __construct(Array $request)
 	{
 		$this->request = $request;
-		$this->getService();
 	}
 	
 	protected function getService()

@@ -6,6 +6,7 @@ use App\Models\Services\UserServices;
 use App\Controllers\Controller;
 use App\Views\IndexView as View;
 use Respect\Validation\Validator as v;
+use App\Views\IndexView;
 
 /**
  * @link https://github.com/gabrielomelo
@@ -14,18 +15,20 @@ use Respect\Validation\Validator as v;
 
 class IndexController extends Controller
 {	
-	
-	public function loadView($smarty_class)
+	public function __construct(Array $request)
 	{
-		return new View($smarty_class, $this);
+		parent::__construct($request, $view);
+		$this->view = new IndexView(
+				$this,
+				
+				);
 	}
 	
-	public function login()
+	public function login(UserServices $user_services)
 	{
 		$info['name'] = $this->request['nick_name'];
 		$info['email'] = $this->request['email'];
 		$info['password'] = sha1($this->request['password']);
-		$service = new UserServices();
-		$service->login($info);		
+		$user_services->login($info);		
 	}
 }

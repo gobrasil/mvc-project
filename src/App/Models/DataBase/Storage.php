@@ -2,7 +2,7 @@
 
 namespace App\Models\DataBase;
 
-require_once 'config/db.php';
+require_once '../Configs/db.php';
 
 /**
  * @link https://github.com/gabrielomelo

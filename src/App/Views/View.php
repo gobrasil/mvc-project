@@ -11,19 +11,13 @@ use App\Controllers\Controller;
 
 class View 
 {
-	protected $twig;
+	protected $twig_envy;
 	protected $controller;
 	
-	public function __construct(Smarty $smarty_class, Controller $controller)
+	public function __construct(Controller $controller)
 	{
-		$this->smarty = $smarty_class;
-		$this->smarty->template_dir = '../src/App/Views/templates/';
-		$this->smarty->compile_dir = '../src/App/Views/templates_c/';
-		$this->smarty->config_dir = '../src/App/Views/configs/';
-		$this->smarty->cache_dir = '../src/App/Views/cache/';
-		$this->smarty->compile_check = true;
 		$this->controller = $controller;
-		$this->loadTemplate();
+		$this->twig_envy = $twig_envy;
 	}
 	
 }

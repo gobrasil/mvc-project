@@ -8,7 +8,6 @@ class IndexView extends View
 {
 	public function loadTemplate()
 	{
-		$this->smarty->assign('name', 'Gabriel');
-		$this->smarty->display('index.tpl');
+		return $this;
 	}
 }
