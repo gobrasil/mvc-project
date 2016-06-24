@@ -18,10 +18,7 @@ class IndexController extends Controller
 	public function __construct(Array $request)
 	{
 		parent::__construct($request, $view);
-		$this->view = new IndexView(
-				$this,
-				
-				);
+		$this->view = new IndexView($this);
 	}
 	
 	public function login(UserServices $user_services)
